@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<!-- parallelbrowser.xml is the runner testng xml which will allow the script run in different browsers parallelly.
+* Here it is configured to run tests parallelly in three browsers - Chrome, Firefox and Microsoft Edge.
+* 
+***************Currently it's not functioning properly due to some session handling issue.*******************
+* 
+* *
+* @author Seshadri @date - 01/22/2019 -->
+
+  
+<suite name="mapSYNQ Automation Test Suite - Prarallel Execution" thread-count="3" parallel="tests">
+
+	<test name="mapSYNQ Automation Test Cases - Chrome">
+	
+		<parameter name="browser" value="chrome"/>
+			<classes>
+				<class name="com.mapsynq.qa.testcases.LandingPageTest"/>	
+				<class name="com.mapsynq.qa.testcases.DirectionsTabTest"/> 			  	
+				<class name="com.mapsynq.qa.testcases.LiveTabTest"/> 
+			</classes>
+	</test>
+	
+     <test name="mapSYNQ Automation Test Cases - firefox">
+	
+		<parameter name="browser" value="firefox"/>
+			<classes>
+				<class name="com.mapsynq.qa.testcases.LandingPageTest"/>	
+				<class name="com.mapsynq.qa.testcases.DirectionsTabTest"/> 			  	
+				<class name="com.mapsynq.qa.testcases.LiveTabTest"/>
+			</classes>
+	</test> 
+	
+	<test name="mapSYNQ Automation Test Cases - edge">
+	
+		<parameter name="browser" value="edge"/>
+			<classes>
+				<class name="com.mapsynq.qa.testcases.LandingPageTest"/>	
+				<class name="com.mapsynq.qa.testcases.DirectionsTabTest"/> 			  	
+				<class name="com.mapsynq.qa.testcases.LiveTabTest"/>
+			</classes>
+	</test>
+	
+</suite>
+

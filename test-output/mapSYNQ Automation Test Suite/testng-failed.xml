@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [mapSYNQ Automation Test Suite]" parallel="tests">
+  <listeners>
+    <listener class-name="com.mapsynq.qa.ExtentReportListener.ExtentReportListener"/>
+  </listeners>
+  <test thread-count="5" name="mapSYNQ Automation Test Cases - Chrome(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.mapsynq.qa.testcases.LiveTabTest">
+        <methods>
+          <include name="closeTollPopupTest"/>
+          <include name="closeCameraPopupTest"/>
+          <include name="viewTollTest"/>
+          <include name="teardown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.mapsynq.qa.testcases.LiveTabTest -->
+    </classes>
+  </test> <!-- mapSYNQ Automation Test Cases - Chrome(failed) -->
+</suite> <!-- Failed suite [mapSYNQ Automation Test Suite] -->

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<!-- singlebrowser.xml is the runner testng xml which will allow the script run in different browsers one at a time.
+* Here it is configured to run tests  - Chrome broswer. It passes the browser name as parameter to @parameter tag 
+* and execute the script in that particular browser.
+*
+* ********************Working perfectly. USe this runner xml to run the whole test suite.*******************
+* *
+* @author Seshadri @date - 01/22/2019 -->
+  
+<suite name="mapSYNQ Automation Test Suite" parallel="tests" >
+
+	<listeners>
+		<listener class-name="com.mapsynq.qa.ExtentReportListener.ExtentReportListener"/>
+	</listeners>
+
+	<test name="mapSYNQ Automation Test Cases - Chrome">
+	
+		<parameter name="browser" value="chrome"/>
+			<classes>
+		  		<class name="com.mapsynq.qa.testcases.LandingPageTest"/>	
+				<class name="com.mapsynq.qa.testcases.DirectionsTabTest"/> 			  	
+				<class name="com.mapsynq.qa.testcases.LiveTabTest"/>  	
+					
+			</classes>
+	</test>
+	
+</suite>
+
